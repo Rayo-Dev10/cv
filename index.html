@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Infográfico - Rayo Palatianos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light gray background for contrast */
+        }
+        /* Custom colors from the Edge palette */
+        .edge-blue { background-color: #0078D4; }
+        .text-edge-green { color: #42C89A; }
+        .text-edge-cyan { color: #00A4EF; }
+        .border-edge-green { border-color: #42C89A; }
+        .icon-cyan { color: #00A4EF; }
+
+        /* Timeline styles */
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+            padding-left: 2.5rem; 
+        }
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 100%;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -6px; /* Adjust to center the dot on the line */
+            top: 5px;
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            background-color: #00A4EF;
+            border: 2px solid #fff;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <div class="max-w-6xl mx-auto my-8 shadow-2xl rounded-lg overflow-hidden bg-white print:shadow-none">
+        <div class="md:flex">
+            <!-- Left Column / Sidebar -->
+            <aside class="md:w-2/5 p-8 edge-blue text-white">
+                <div class="text-center mb-8">
+                    <img src="https://placehold.co/150x150/FFFFFF/42C89A?text=RP" alt="Foto de Rayo Palatianos" class="rounded-full w-36 h-36 mx-auto mb-4 border-4 border-white shadow-lg">
+                    <h1 class="text-3xl font-bold">Rayo Palatianos</h1>
+                    <h2 class="text-lg font-light text-gray-200">Consultor y Gestor Administrativo</h2>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold border-b-2 border-edge-green pb-2 mb-4 text-edge-green">CONTACTO</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><i class="fas fa-envelope fa-fw w-6 icon-cyan"></i> rayo.palatianos@gmail.com</li>
+                        <li><i class="fas fa-phone-alt fa-fw w-6 icon-cyan"></i> +57 301 306 8968</li>
+                        <li><i class="fas fa-map-marker-alt fa-fw w-6 icon-cyan"></i> Pensilvania, Caldas</li>
+                    </ul>
+                </div>
+
+                <!-- Skills -->
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold border-b-2 border-edge-green pb-2 mb-4 text-edge-green">HABILIDADES</h3>
+                    <div class="text-sm space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-200 mb-2">Tecnológicas:</h4>
+                            <ul class="list-disc list-inside space-y-1 pl-2">
+                                <li>Excel avanzado, macros, Power BI, MySQL</li>
+                                <li>PowerPoint, Word, CRM (Salesforce)</li>
+                                <li>Herramientas Google, Bases de datos</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-200 mb-2">Administrativas:</h4>
+                            <ul class="list-disc list-inside space-y-1 pl-2">
+                                <li>KPIs, gestión documental, recuperación de cartera</li>
+                                <li>Control de inventarios, manejo de clientes</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-200 mb-2">Blandas:</h4>
+                            <ul class="list-disc list-inside space-y-1 pl-2">
+                                <li>Comunicación asertiva, empatía, liderazgo</li>
+                                <li>Servicio al cliente, resiliencia, solución de conflictos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold border-b-2 border-edge-green pb-2 mb-4 text-edge-green">IDIOMAS</h3>
+                    <p class="text-sm"><strong>Español:</strong> Nativo</p>
+                    <p class="text-sm"><strong>Inglés:</strong> Básico Conversacional</p>
+                </div>
+
+                 <!-- Intereses -->
+                <div>
+                    <h3 class="text-xl font-semibold border-b-2 border-edge-green pb-2 mb-4 text-edge-green">INTERESES</h3>
+                    <ul class="list-disc list-inside text-sm space-y-1 pl-2">
+                        <li>Natación y conducción recreativa</li>
+                        <li>Audiolibros y diseño web</li>
+                        <li>Fútbol aficionado</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Right Column / Main Content -->
+            <main class="md:w-3/5 p-8">
+                <!-- Profile Section -->
+                <section class="mb-6">
+                    <h3 class="text-2xl font-bold mb-4 text-edge-green flex items-center"><i class="fas fa-user-tie mr-3 text-edge-cyan"></i>PERFIL PROFESIONAL</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Consultor y gestor administrativo con sólida trayectoria en los sectores financiero, comercial y digital. Con sólidos conocimientos en inteligencia de negocios, atención al cliente, procesos documentales y gestión de conflictos. Cuento, además, con una base formativa en Derecho colombiano gracias a seis semestres cursados, lo cual refuerza mi criterio en la interpretación normativa y en la gestión de procesos públicos. Destaco por mi habilidad para generar soluciones eficaces, adaptarme a contextos complejos y fomentar relaciones humanas basadas en la empatía, el servicio y la comunicación asertiva. Mi experiencia incluye liderar procesos de expansión, atención ciudadana, resolución de trámites, formación educativa y manejo de herramientas tecnológicas para optimizar la operación institucional. Mi formación académica, en combinación con mi vocación de servicio, me perfilan como un aliado estratégico para dependencias públicas de carácter administrativo, social o financiero.
+                    </p>
+                </section>
+
+                <!-- Experience Section -->
+                <section class="mb-6">
+                    <h3 class="text-2xl font-bold mb-6 text-edge-green flex items-center"><i class="fas fa-briefcase mr-3 text-edge-cyan"></i>EXPERIENCIA LABORAL</h3>
+                    <div class="relative">
+                        <!-- Experience Items Here -->
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-md text-gray-800">Líder de Crecimiento</h4>
+                            <p class="text-xs text-gray-500 mb-1">Digital Hedge | may 2022 - sep 2024</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Coordiné procesos operativos, atención ciudadana y soporte técnico digital.</li>
+                                <li>Negocié alianzas y gestioné incentivos de fidelización.</li>
+                                <li>Implementé programas de crecimiento con base en análisis de datos.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-semibold text-md text-gray-800">Consultor Comercial</h4>
+                            <p class="text-xs text-gray-500 mb-1">Airtm S.A. de C.V. | may 2019 - mar 2022</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Supervisé operaciones financieras internacionales.</li>
+                                <li>Implementé soluciones contra fraudes y lideré estrategias de soporte y subsidios.</li>
+                                <li>Fortalecí la eficiencia operativa a través de análisis de costos y mejora de procesos.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                             <h4 class="font-semibold text-md text-gray-800">Consultor Independiente</h4>
+                            <p class="text-xs text-gray-500 mb-1">Rayo Palatianos | abr 2015 - may 2019</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Experiencia en arbitraje de divisas y mercados digitales.</li>
+                                <li>Facilitador de seminarios virtuales, conferencista y asesor en educación financiera.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                           <h4 class="font-semibold text-md text-gray-800">Telemercaderista</h4>
+                            <p class="text-xs text-gray-500 mb-1">Comdata Colombia | nov 2016 - ago 2017</p>
+                            <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                                <li>Destacado por superar metas de conversión y atención efectiva al cliente.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                <section class="mb-6">
+                    <h3 class="text-2xl font-bold mb-4 text-edge-green flex items-center"><i class="fas fa-graduation-cap mr-3 text-edge-cyan"></i>FORMACIÓN ACADÉMICA</h3>
+                     <div class="space-y-3 text-sm">
+                        <p><strong>Tecnología en Desarrollo de Software</strong> – SENA, 1.° semestre (2025)</p>
+                        <p><strong>Contaduría Pública</strong> – Inst. Univ. Oriente de Caldas, 1.° semestre (2025)</p>
+                        <p><strong>Administración de Empresas</strong> – Inst. Univ. Oriente de Caldas, 1.° semestre (2025)</p>
+                        <p><strong>Derecho</strong> – Universidad de Caldas (hasta sexto semestre)</p>
+                        <p><strong>Bachiller Académico</strong> – Inst. Educativa Mixta La Linda (2014)</p>
+                    </div>
+                </section>
+                
+                <!-- Certifications Section -->
+                <section>
+                    <h3 class="text-2xl font-bold mb-4 text-edge-green flex items-center"><i class="fas fa-award mr-3 text-edge-cyan"></i>CERTIFICACIONES</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5 text-xs">
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2 uppercase">Marketing y Negocios</h4>
+                            <ul class="space-y-1 text-gray-600">
+                                <li>Marketing Digital, Product Marketing (Platzi)</li>
+                                <li>Fundamentos de Mkt Digital (Coursera)</li>
+                                <li>Marketing 360 (Eidos Global)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2 uppercase">Habilidades Personales</h4>
+                            <ul class="space-y-1 text-gray-600">
+                                <li>Curso de Oratoria, Habilidades Blandas (Platzi)</li>
+                                <li>Entender Emociones I (Coursera), II (Platzi)</li>
+                                <li>Gestión del Tiempo (Platzi)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2 uppercase">Ofimática y Datos</h4>
+                            <ul class="space-y-1 text-gray-600">
+                                <li>Excel (Básico, Intermedio, Avanzado, Macros) (Platzi)</li>
+                                <li>Excel 2010, Office 2010 (SENA)</li>
+                                <li>PowerPoint y Word para empresas (Platzi)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-700 mb-2 uppercase">Gestión Documental</h4>
+                            <ul class="space-y-1 text-gray-600">
+                                <li>Gestión Documental para Empresas (Platzi)</li>
+                                <li>Legislación documental en entorno laboral (SENA)</li>
+                                <li>Estrategias para Acceso y Uso de Información (SENA)</li>
+                                <li>Gestión de Documentos Digitales con Word (Platzi)</li>
+                            </ul>
+                        </div>
+                        <div class="md:col-span-2">
+                             <h4 class="font-bold text-gray-700 mb-2 uppercase">Admón. Pública y Operativa</h4>
+                            <ul class="space-y-1 text-gray-600 columns-2">
+                                <li>Admón. y recuperación de cartera (SENA)</li>
+                                <li>Admón. y control de inventarios (SENA)</li>
+                                <li>Atención al cliente por medios tecnológicos (SENA)</li>
+                                <li>Administración de Recursos Humanos (SENA)</li>
+                                <li>Resolución de Problemas y Toma de Decisiones (Coursera)</li>
+                                <li>Pensamiento Lógico y Lenguajes de Programación (Platzi)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
