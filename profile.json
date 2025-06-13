@@ -1,0 +1,34 @@
+{
+  "name": "Rayo Palatianos",
+  "title": "Consultor y Gestor Administrativo",
+  "photoUrl": "https://via.placeholder.com/144", 
+  "contact": {
+    "email": "rayo.palatianos@gmail.com",
+    "phone": "+57 301 306 8968",
+    "location": "Pensilvania, Caldas"
+  },
+  "skills": {
+    "Tecnológicas": [
+      "Excel avanzado, macros, Power BI, MySQL",
+      "PowerPoint, Word, CRM (Salesforce)",
+      "Herramientas Google, Bases de datos"
+    ],
+    "Administrativas": [
+      "KPIs, gestión documental, recuperación de cartera",
+      "Control de inventarios, manejo de clientes"
+    ],
+    "Blandas": [
+      "Comunicación asertiva, empatía, liderazgo",
+      "Servicio al cliente, resiliencia, solución de conflictos"
+    ]
+  },
+  "languages": {
+    "Español": "Nativo",
+    "Inglés": "Básico Conversacional"
+  },
+  "interests": [
+    "Natación y conducción recreativa",
+    "Audiolibros y diseño web",
+    "Fútbol aficionado"
+  ]
+}
