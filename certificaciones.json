@@ -1,4 +1,15 @@
 [
+   {
+    "category": "Administración operativa y empresarial",
+    "items": [
+      "Administración y recuperación de cartera (SENA, 2025)",
+      "Administración y control de inventarios (SENA, 2025)",
+      "Atención al cliente por medios tecnológicos (SENA, 2025)",
+      "Administración de Recursos Humanos (SENA, 2025)",
+      "Resolución de Problemas y Toma de Decisiones (Coursera, 2025)",
+      "Pensamiento Lógico y Lenguajes de Programación (Platzi, 2023)"
+    ]
+  },
   {
     "category": "Marketing y Negocios",
     "items": [
@@ -32,18 +43,7 @@
       "Gestión de Documentos Digitales con Word (Platzi, 2024)"
     ]
   },
-  {
-    "category": "Administración operativa y empresarial",
-    "spanTwo": true,
-    "items": [
-      "Administración y recuperación de cartera (SENA, 2025)",
-      "Administración y control de inventarios (SENA, 2025)",
-      "Atención al cliente por medios tecnológicos (SENA, 2025)",
-      "Administración de Recursos Humanos (SENA, 2025)",
-      "Resolución de Problemas y Toma de Decisiones (Coursera, 2025)",
-      "Pensamiento Lógico y Lenguajes de Programación (Platzi, 2023)"
-    ]
-  },
+ 
   {
     "category": "Idiomas",
     "items": [
