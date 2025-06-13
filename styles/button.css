@@ -1,3 +1,4 @@
+/* Adds a subtle shine animation to the export button */
 #exportPdfBtn {
     position: relative;
     overflow: hidden;

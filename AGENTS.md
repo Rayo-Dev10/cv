@@ -30,3 +30,10 @@ python -m json.tool certificaciones.json
 ```
 
 Todos deben completarse sin errores antes de realizar un commit.
+
+## Mejores prácticas para un codigo mas conciso
+- Centraliza la creación de elementos HTML en funciones reutilizables para evitar duplicaciones.
+- Simplifica los bucles y transformaciones de datos usando métodos como `map`, `filter` y `reduce`.
+- Extrae la lógica de formateo o selección de datos a helpers importados desde `scripts/` (por ejemplo `scripts/helpers.js`).
+- Mantén CSS modular combinando reglas comunes y eliminando estilos no utilizados.
+- Documenta brevemente cada módulo para que sea claro su propósito y evitar redundancias futuras.
