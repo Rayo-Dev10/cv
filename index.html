@@ -236,6 +236,51 @@
                 </section>
             </main>
         </div>
+</div>
+
+    <!-- PDF Export Controls -->
+    <div id="pdfControls" class="fixed bottom-4 right-4 print:hidden bg-white border rounded shadow-lg p-3 flex items-center space-x-2">
+        <select id="pdfOption" class="border rounded p-1">
+            <option value="letter">Reducción de escala (Carta)</option>
+            <option value="legal">Tamaño oficio</option>
+            <option value="custom">Personalizado (100%)</option>
+        </select>
+        <button id="exportPdfBtn" class="bg-edge-blue text-white px-3 py-1 rounded">Exportar a PDF</button>
     </div>
+
+    <script>
+        const btn = document.getElementById('exportPdfBtn');
+        btn.addEventListener('click', () => {
+            const option = document.getElementById('pdfOption').value;
+            const styleEl = document.getElementById('printStyle') || document.createElement('style');
+            styleEl.id = 'printStyle';
+            let pageCSS = '';
+            const container = document.querySelector('.max-w-6xl');
+            const targetWidth = 816; // 8.5in in pixels at 96dpi
+            let scale = 1;
+            if (option === 'letter') {
+                pageCSS = '@page{size:215.9mm 279.4mm;margin:10mm;}';
+                scale = targetWidth / container.offsetWidth;
+            } else if (option === 'legal') {
+                pageCSS = '@page{size:215.9mm 330.2mm;margin:10mm;}';
+                scale = targetWidth / container.offsetWidth;
+            } else {
+                pageCSS = '@page{size:auto;margin:10mm;}';
+                scale = 1;
+            }
+            styleEl.textContent = pageCSS;
+            document.head.appendChild(styleEl);
+
+            document.body.style.transform = `scale(${scale})`;
+            document.body.style.transformOrigin = 'top left';
+
+            window.print();
+
+            setTimeout(() => {
+                document.body.style.transform = '';
+                document.body.style.transformOrigin = '';
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
