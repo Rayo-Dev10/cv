@@ -1,3 +1,21 @@
+function splitCertStrings(str) {
+  const res = [];
+  let curr = '';
+  let open = 0;
+  for (const ch of str) {
+    if (ch === '(') open++;
+    if (ch === ')') open--;
+    if (ch === ',' && open === 0) {
+      res.push(curr.trim());
+      curr = '';
+      continue;
+    }
+    curr += ch;
+  }
+  if (curr.trim()) res.push(curr.trim());
+  return res;
+}
+
 export async function loadData() {
   const [profile, experiencia, formacion, certificaciones] = await Promise.all([
     fetch('profile.json').then(r => r.json()),
@@ -10,7 +28,7 @@ export async function loadData() {
   const skillsHtml = Object.entries(profile.skills).map(([cat, items]) => `
         <div>
           <h4 class="font-semibold text-gray-200 mb-2">${cat}:</h4>
-          <ul class="list-disc list-inside space-y-1 pl-2">
+          <ul class="space-y-1 pl-2">
             ${items.map(i => `<li>${i}</li>`).join('')}
           </ul>
         </div>
@@ -44,7 +62,7 @@ export async function loadData() {
         </div>
         <div>
           <h3 class="text-xl font-semibold border-b-2 border-edge-green pb-2 mb-4 text-edge-green">INTERESES</h3>
-          <ul class="list-disc list-inside text-sm space-y-1 pl-2">
+          <ul class="text-sm space-y-1 pl-2">
             ${profile.interests.map(i => `<li>${i}</li>`).join('')}
           </ul>
         </div>
@@ -77,15 +95,41 @@ export async function loadData() {
   });
 
   const certContainer = document.getElementById('certificationGrid');
+  const parseItem = str => {
+    const m = str.match(/(.+)\s*\(([^,]+),\s*(\d{4}(?:-\d{4})?)\)$/);
+    if (!m) return null;
+    return { courses: m[1].split(',').map(c => c.trim()), entity: m[2].trim(), year: m[3].trim() };
+  };
+
   certificaciones.forEach(cat => {
+    const groups = {};
+    cat.items.forEach(raw => {
+      splitCertStrings(raw).forEach(part => {
+        const info = parseItem(part);
+        if (info) {
+          const key = `${info.entity}-${info.year}`;
+          if (!groups[key]) groups[key] = { entity: info.entity, year: info.year, courses: [] };
+          groups[key].courses.push(...info.courses);
+        }
+      });
+    });
+
+    const sorted = Object.values(groups).sort((a, b) => {
+      const ya = parseInt(a.year.split('-').pop());
+      const yb = parseInt(b.year.split('-').pop());
+      return yb - ya;
+    });
+
     const div = document.createElement('div');
     if (cat.spanTwo) div.classList.add('md:col-span-2');
-    const ulClass = cat.spanTwo ? 'space-y-1 text-gray-600 columns-2' : 'space-y-1 text-gray-600';
     div.innerHTML = `
           <h4 class="font-bold text-gray-700 mb-2 uppercase">${cat.category}</h4>
-          <ul class="${ulClass}">
-            ${cat.items.map(i => `<li>${i}</li>`).join('')}
-          </ul>
+          ${sorted.map(g => `
+            <p class="font-medium text-gray-700">${g.entity} (${g.year})</p>
+            <ul class="space-y-1 text-gray-600 ml-4">
+              ${g.courses.map(c => `<li>${c}</li>`).join('')}
+            </ul>
+          `).join('')}
     `;
     certContainer.appendChild(div);
   });
