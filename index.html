@@ -195,7 +195,7 @@
                 .map(([lang, lvl]) => `<p class="text-sm"><strong>${lang}:</strong> ${lvl}</p>`).join('');
             sidebar.innerHTML = `
                 <div class="text-center mb-8">
-                    <img src="${profile.photoUrl}" alt="Foto de ${profile.name}" class="rounded-full w-36 h-36 mx-auto mb-4 border-4 border-white shadow-lg">
+                    <img src="${profile.photoUrl}" alt="Foto de ${profile.name}" crossorigin="anonymous" class="rounded-full w-36 h-36 mx-auto mb-4 border-4 border-white shadow-lg">
                     <h1 class="text-3xl font-bold">${profile.name}</h1>
                     <h2 class="text-lg font-light text-gray-200">${profile.title}</h2>
                 </div>
