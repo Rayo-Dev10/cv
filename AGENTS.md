@@ -14,6 +14,8 @@ Al modificar secciones del CV que involucren estos datos, actualiza primero los 
 - Usa `npm` o `yarn` sólo si es estrictamente necesario; el proyecto no requiere herramientas adicionales para funcionar.
 - Ejecuta `python -m json.tool <archivo>` para validar los cambios en cualquier archivo JSON que edites.
 
+A partir de ahora los estilos personalizados deben colocarse en `styles/main.css` y los scripts propios en la carpeta `scripts/`. No incluyas bloques `<style>` o código JavaScript incrustado en `index.html`.
+
 ## Programmatic Checks
 Para validar la integridad de los JSON se recomienda ejecutar:
 
