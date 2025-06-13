@@ -14,10 +14,12 @@ export function setupPdfExport() {
     });
   });
 
-  function exportPdf(option) {
-    const container = document.querySelector('.max-w-6xl');
-    html2canvas(container, { scale: 2, useCORS: true }).then(canvas => {
-      const imgData = canvas.toDataURL('image/png');
+    function exportPdf(option) {
+      const container = document.querySelector('.max-w-6xl');
+      const bulletLists = container.querySelectorAll('#experienceList ul');
+      bulletLists.forEach(ul => ul.classList.add('no-bullets'));
+      html2canvas(container, { scale: 2, useCORS: true }).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
       let pdfWidth, pdfHeight;
       if (option === 'letter') {
         pdfWidth = 612;
@@ -33,8 +35,9 @@ export function setupPdfExport() {
         imgHeight = pdfHeight;
         imgWidth = canvas.width * pdfHeight / canvas.height;
       }
-      doc.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-      doc.save('cv.pdf');
-    });
+        doc.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+        doc.save('cv.pdf');
+        bulletLists.forEach(ul => ul.classList.remove('no-bullets'));
+      });
   }
 }
