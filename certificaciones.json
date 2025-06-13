@@ -19,17 +19,7 @@
       "Marketing Digital (Platzi, 2024)"
     ]
   },
-  {
-    "category": "Habilidades Personales",
-    "items": [
-      "Habilidades Blandas (Platzi, 2025)",
-      "Entender Emociones II (Coursera, 2025)",
-      "Curso de Oratoria (Platzi, 2024)",
-      "Entender Emociones I (Platzi, 2024)",
-      "Gestión del Tiempo (Platzi, 2024)"
-    ]
-  },
-  {
+    {
     "category": "Ofimática y Datos",
     "items": [
       "Excel 365 Avanzado con Macros (Platzi, 2024)",
@@ -43,18 +33,28 @@
     ]
   },
   {
+    "category": "Habilidades Personales",
+    "items": [
+      "Habilidades Blandas (Platzi, 2025)",
+      "Entender Emociones II (Coursera, 2025)",
+      "Curso de Oratoria (Platzi, 2024)",
+      "Entender Emociones I (Platzi, 2024)",
+      "Gestión del Tiempo (Platzi, 2024)"
+    ]
+  },
+    {
+    "category": "Idiomas",
+    "items": [
+      "Interacción en Inglés 1 (SENA, 2015)"
+    ]
+  },
+  {
     "category": "Gestión Documental",
     "items": [
       "Estrategias para Acceso y Uso de Información (SENA, 2025)",
       "Gestión Documental para Empresas (Platzi, 2024)",
       "Gestión de Documentos Digitales con Word (Platzi, 2024)",
       "Legislación documental en entorno laboral (SENA, 2015)"
-    ]
-  },
-  {
-    "category": "Idiomas",
-    "items": [
-      "Interacción en Inglés 1 (SENA, 2015)"
     ]
   }
 ]
