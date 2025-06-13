@@ -13,7 +13,8 @@
   {
     "category": "Marketing y Negocios",
     "items": [
-      "Marketing Digital, Product Marketing (Platzi, 2024)",
+      "Marketing Digital (Platzi, 2024)",
+      "Product Marketing (Platzi, 2024)",
       "Fundamentos de Mkt Digital (Coursera, 2025)",
       "Marketing 360 (Eidos Global, 2025)"
     ]
@@ -21,8 +22,10 @@
   {
     "category": "Habilidades Personales",
     "items": [
-      "Curso de Oratoria, Habilidades Blandas (Platzi, 2024-2025)",
-      "Entender Emociones I (Coursera, 2025), Entender Emociones II (Platzi, 2024)",
+      "Curso de Oratoria (Platzi, 2024-2025)",
+      "Habilidades Blandas (Platzi, 2024-2025)",
+      "Entender Emociones I (Coursera, 2025)",
+      "Entender Emociones II (Platzi, 2024)",
       "Gestión del Tiempo (Platzi, 2024)"
     ]
   },
@@ -30,7 +33,8 @@
     "category": "Ofimática y Datos",
     "items": [
       "Excel (Básico, Intermedio, Avanzado, Macros) (Platzi, 2024)",
-      "Excel 2010, Word 2010 (SENA, 2014-2015)",
+      "Excel 2010 (SENA, 2014-2015)",
+      "Word 2010 (SENA, 2014-2015)",
       "PowerPoint y Word para empresas (Platzi, 2024)"
     ]
   },
