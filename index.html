@@ -238,20 +238,37 @@
         </div>
 </div>
 
-    <!-- PDF Export Controls -->
-    <div id="pdfControls" class="fixed bottom-4 right-4 print:hidden bg-white border rounded shadow-lg p-3 flex items-center space-x-2">
-        <select id="pdfOption" class="border rounded p-1">
-            <option value="letter">Reducción de escala (Carta)</option>
-            <option value="legal">Tamaño oficio</option>
-            <option value="custom">Personalizado (100%)</option>
-        </select>
-        <button id="exportPdfBtn" class="bg-edge-blue text-white px-3 py-1 rounded">Exportar a PDF</button>
+    <!-- PDF Export Button -->
+    <button id="exportPdfBtn" class="fixed bottom-4 right-4 print:hidden bg-edge-blue text-white px-4 py-2 rounded shadow-lg flex flex-col items-center">
+        <span>Exportar a PDF/A</span>
+        <span class="text-xs">Calidad impresión</span>
+    </button>
+
+    <!-- Overlay with export size options -->
+    <div id="pdfOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 print:hidden flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-3 gap-4">
+            <button data-size="letter" class="pdf-option border rounded p-4 hover:bg-edge-blue hover:text-white">Tamaño Carta</button>
+            <button data-size="legal" class="pdf-option border rounded p-4 hover:bg-edge-blue hover:text-white">Tamaño oficio</button>
+            <button data-size="custom" class="pdf-option border rounded p-4 hover:bg-edge-blue hover:text-white">Tamaño Real</button>
+        </div>
     </div>
 
     <script>
-        const btn = document.getElementById('exportPdfBtn');
-        btn.addEventListener('click', () => {
-            const option = document.getElementById('pdfOption').value;
+        const openBtn = document.getElementById('exportPdfBtn');
+        const overlay = document.getElementById('pdfOverlay');
+
+        openBtn.addEventListener('click', () => {
+            overlay.classList.remove('hidden');
+        });
+
+        document.querySelectorAll('.pdf-option').forEach(el => {
+            el.addEventListener('click', () => {
+                overlay.classList.add('hidden');
+                exportPdf(el.dataset.size);
+            });
+        });
+
+        function exportPdf(option) {
             const styleEl = document.getElementById('printStyle') || document.createElement('style');
             styleEl.id = 'printStyle';
             let pageCSS = '';
@@ -280,7 +297,7 @@
                 document.body.style.transform = '';
                 document.body.style.transformOrigin = '';
             }, 1000);
-        });
+        }
     </script>
 </body>
 </html>
