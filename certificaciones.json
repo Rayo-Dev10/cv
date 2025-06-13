@@ -1,5 +1,5 @@
 [
-   {
+  {
     "category": "Administración operativa y empresarial",
     "items": [
       "Administración y recuperación de cartera (SENA, 2025)",
@@ -13,41 +13,44 @@
   {
     "category": "Marketing y Negocios",
     "items": [
-      "Marketing Digital (Platzi, 2024)",
+      "Marketing 360 (Eidos Global, 2025)",
+      "Fundamentos de Marketing Digital (Coursera, 2025)",
       "Product Marketing (Platzi, 2024)",
-      "Fundamentos de Mkt Digital (Coursera, 2025)",
-      "Marketing 360 (Eidos Global, 2025)"
+      "Marketing Digital (Platzi, 2024)"
     ]
   },
   {
     "category": "Habilidades Personales",
     "items": [
-      "Curso de Oratoria (Platzi, 2024-2025)",
-      "Habilidades Blandas (Platzi, 2024-2025)",
-      "Entender Emociones I (Coursera, 2025)",
-      "Entender Emociones II (Platzi, 2024)",
+      "Habilidades Blandas (Platzi, 2025)",
+      "Entender Emociones II (Coursera, 2025)",
+      "Curso de Oratoria (Platzi, 2024)",
+      "Entender Emociones I (Platzi, 2024)",
       "Gestión del Tiempo (Platzi, 2024)"
     ]
   },
   {
     "category": "Ofimática y Datos",
     "items": [
-      "Excel (Básico, Intermedio, Avanzado, Macros) (Platzi, 2024)",
-      "Excel 2010 (SENA, 2014-2015)",
-      "Word 2010 (SENA, 2014-2015)",
-      "PowerPoint y Word para empresas (Platzi, 2024)"
+      "Excel 365 Avanzado con Macros (Platzi, 2024)",
+      "Excel 365 Avanzado (Platzi, 2024)",
+      "Excel 365 Intermedio (Platzi, 2024)",
+      "Excel 365 Básico (Platzi, 2024)",
+      "PowerPoint: Plantillas y Vistas de Presentación (Platzi, 2024)",
+      "Word: Diseño de Plantillas y Creación de Formularios (Platzi, 2024)",
+      "Word 2010 (SENA, 2015)",
+      "Excel 2010 (SENA, 2014)"
     ]
   },
   {
     "category": "Gestión Documental",
     "items": [
-      "Gestión Documental para Empresas (Platzi, 2024)",
-      "Legislación documental en entorno laboral (SENA, 2015)",
       "Estrategias para Acceso y Uso de Información (SENA, 2025)",
-      "Gestión de Documentos Digitales con Word (Platzi, 2024)"
+      "Gestión Documental para Empresas (Platzi, 2024)",
+      "Gestión de Documentos Digitales con Word (Platzi, 2024)",
+      "Legislación documental en entorno laboral (SENA, 2015)"
     ]
   },
- 
   {
     "category": "Idiomas",
     "items": [
