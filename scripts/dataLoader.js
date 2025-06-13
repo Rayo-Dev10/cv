@@ -80,7 +80,7 @@ export async function loadData() {
     div.innerHTML = `
           <h4 class="font-semibold text-md text-gray-800">${item.role}</h4>
           <p class="text-xs text-gray-500 mb-1">${item.company} | ${item.period}</p>
-          <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+          <ul class="text-gray-600 text-sm space-y-1">
             ${item.details.map(d => `<li>${d}</li>`).join('')}
           </ul>
     `;
@@ -125,7 +125,7 @@ export async function loadData() {
     div.innerHTML = `
           <h4 class="font-bold text-gray-700 mb-2 uppercase">${cat.category}</h4>
           ${sorted.map(g => `
-            <p class="font-medium text-gray-700">${g.entity} (${g.year})</p>
+            <p class="font-bold text-gray-700">${g.entity} (${g.year})</p>
             <ul class="space-y-1 text-gray-600 ml-4">
               ${g.courses.map(c => `<li>${c}</li>`).join('')}
             </ul>

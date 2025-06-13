@@ -12,13 +12,9 @@ body {
 .border-edge-green { border-color: #42C89A; }
 .icon-cyan { color: #00A4EF; }
 
-.no-bullets,
-.no-bullets li {
-    list-style: none !important;
+
+ul {
+    list-style: none;
     padding-left: 0;
     margin-left: 0;
-}
-
-.no-bullets li::marker {
-    content: '' !important;
 }
