@@ -26,8 +26,9 @@ export async function loadData() {
         <div class="mb-6">
           <h3 class="text-xl font-semibold border-b-2 border-edge-green pb-2 mb-4 text-edge-green">CONTACTO</h3>
           <ul class="space-y-3 text-sm">
-            <li><i class="fas fa-envelope fa-fw w-6 icon-cyan"></i> ${profile.contact.email}</li>
-            <li><i class="fas fa-phone-alt fa-fw w-6 icon-cyan"></i> ${profile.contact.phone}</li>
+            <li><i class="fas fa-envelope fa-fw w-6 icon-cyan"></i> <a href="mailto:${profile.contact.email}?subject=He%20observado%20tu%20hoja%20de%20vida,%20Rayo" class="hover:underline">${profile.contact.email}</a></li>
+            <li><i class="fas fa-phone-alt fa-fw w-6 icon-cyan"></i> <a href="tel:${profile.contact.phone.replace(/\s+/g, '')}" class="hover:underline">${profile.contact.phone}</a></li>
+            <li><i class="fab fa-whatsapp fa-fw w-6" style="color:#25D366"></i> <a href="https://wa.me/573013068968?text=He%20visto%20tu%20hoja%20de%20vida%20y%20deseo%20formularte%20unas%20preguntas" target="_blank" rel="noopener" class="hover:underline">${profile.contact.whatsapp}</a></li>
             <li><i class="fas fa-map-marker-alt fa-fw w-6 icon-cyan"></i> ${profile.contact.location}</li>
           </ul>
         </div>
