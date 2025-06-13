@@ -252,10 +252,13 @@
             <button data-size="custom" class="pdf-option border rounded p-4 hover:bg-edge-blue hover:text-white">Tamaño Real</button>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <script>
         const openBtn = document.getElementById('exportPdfBtn');
         const overlay = document.getElementById('pdfOverlay');
+        const { jsPDF } = window.jspdf;
 
         openBtn.addEventListener('click', () => {
             overlay.classList.remove('hidden');
@@ -269,34 +272,30 @@
         });
 
         function exportPdf(option) {
-            const styleEl = document.getElementById('printStyle') || document.createElement('style');
-            styleEl.id = 'printStyle';
-            let pageCSS = '';
-            const container = document.querySelector('.max-w-6xl');
-            const targetWidth = 816; // 8.5in in pixels at 96dpi
-            let scale = 1;
-            if (option === 'letter') {
-                pageCSS = '@page{size:215.9mm 279.4mm;margin:10mm;}';
-                scale = targetWidth / container.offsetWidth;
-            } else if (option === 'legal') {
-                pageCSS = '@page{size:215.9mm 330.2mm;margin:10mm;}';
-                scale = targetWidth / container.offsetWidth;
-            } else {
-                pageCSS = '@page{size:auto;margin:10mm;}';
-                scale = 1;
-            }
-            styleEl.textContent = pageCSS;
-            document.head.appendChild(styleEl);
-
-            document.body.style.transform = `scale(${scale})`;
-            document.body.style.transformOrigin = 'top left';
-
-            window.print();
-
-            setTimeout(() => {
-                document.body.style.transform = '';
-                document.body.style.transformOrigin = '';
-            }, 1000);
+            const container = document.querySelector(".max-w-6xl");
+            html2canvas(container, {scale: 2}).then(canvas => {
+                const imgData = canvas.toDataURL("image/png");
+                let pdfWidth, pdfHeight;
+                if (option === "letter") {
+                    pdfWidth = 612;
+                    pdfHeight = 792;
+                } else if (option === "legal") {
+                    pdfWidth = 612;
+                    pdfHeight = 936;
+                } else {
+                    pdfWidth = canvas.width * 0.75;
+                    pdfHeight = canvas.height * 0.75;
+                }
+                const doc = new jsPDF({orientation: pdfWidth > pdfHeight ? "landscape" : "portrait", unit: "pt", format: [pdfWidth, pdfHeight]});
+                let imgWidth = pdfWidth;
+                let imgHeight = canvas.height * pdfWidth / canvas.width;
+                if (imgHeight > pdfHeight) {
+                    imgHeight = pdfHeight;
+                    imgWidth = canvas.width * pdfHeight / canvas.height;
+                }
+                doc.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+                doc.save("cv.pdf");
+            });
         }
     </script>
 </body>
