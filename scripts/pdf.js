@@ -17,7 +17,10 @@ export function setupPdfExport() {
     function exportPdf(option) {
       const container = document.querySelector('.max-w-6xl');
       const bulletLists = container.querySelectorAll('#experienceList ul');
-      bulletLists.forEach(ul => ul.classList.add('no-bullets'));
+      bulletLists.forEach(ul => {
+        ul.classList.add('no-bullets');
+        ul.querySelectorAll('li').forEach(li => li.classList.add('no-bullets'));
+      });
       html2canvas(container, { scale: 2, useCORS: true }).then(canvas => {
         const imgData = canvas.toDataURL('image/png');
       let pdfWidth, pdfHeight;
@@ -37,7 +40,10 @@ export function setupPdfExport() {
       }
         doc.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
         doc.save('cv.pdf');
-        bulletLists.forEach(ul => ul.classList.remove('no-bullets'));
+        bulletLists.forEach(ul => {
+          ul.classList.remove('no-bullets');
+          ul.querySelectorAll('li').forEach(li => li.classList.remove('no-bullets'));
+        });
       });
   }
 }
