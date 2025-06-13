@@ -16,10 +16,33 @@
         }
         /* Custom colors from the Edge palette */
         .edge-blue { background-color: #0078D4; }
+        .adobe-red { background-color: #FF0000; }
         .text-edge-green { color: #42C89A; }
         .text-edge-cyan { color: #00A4EF; }
         .border-edge-green { border-color: #42C89A; }
         .icon-cyan { color: #00A4EF; }
+
+        /* Animation for export button shine */
+        #exportPdfBtn {
+            position: relative;
+            overflow: hidden;
+        }
+        #exportPdfBtn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+            pointer-events: none;
+            animation: shine 3s infinite;
+        }
+        @keyframes shine {
+            0% { left: -100%; }
+            60% { left: 100%; }
+            100% { left: 100%; }
+        }
 
         /* Timeline styles */
         .timeline-item {
@@ -239,7 +262,7 @@
 </div>
 
     <!-- PDF Export Button -->
-    <button id="exportPdfBtn" class="fixed bottom-4 right-4 print:hidden bg-edge-blue text-white px-4 py-2 rounded shadow-lg flex flex-col items-center">
+    <button id="exportPdfBtn" class="fixed bottom-4 right-4 print:hidden bg-adobe-red text-white px-4 py-2 rounded shadow-lg flex flex-col items-center">
         <span>Exportar a PDF/A</span>
         <span class="text-xs">Calidad impresión</span>
     </button>
@@ -248,7 +271,6 @@
     <div id="pdfOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 print:hidden flex items-center justify-center">
         <div class="bg-white p-6 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-3 gap-4">
             <button data-size="letter" class="pdf-option border rounded p-4 hover:bg-edge-blue hover:text-white">Tamaño Carta</button>
-            <button data-size="legal" class="pdf-option border rounded p-4 hover:bg-edge-blue hover:text-white">Tamaño oficio</button>
             <button data-size="custom" class="pdf-option border rounded p-4 hover:bg-edge-blue hover:text-white">Tamaño Real</button>
         </div>
     </div>
@@ -279,9 +301,6 @@
                 if (option === "letter") {
                     pdfWidth = 612;
                     pdfHeight = 792;
-                } else if (option === "legal") {
-                    pdfWidth = 612;
-                    pdfHeight = 936;
                 } else {
                     pdfWidth = canvas.width * 0.75;
                     pdfHeight = canvas.height * 0.75;
