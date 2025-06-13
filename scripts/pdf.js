@@ -1,3 +1,4 @@
+// Handles the PDF export modal and file generation.
 export function setupPdfExport() {
   const openBtn = document.getElementById('exportPdfBtn');
   const overlay = document.getElementById('pdfOverlay');

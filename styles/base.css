@@ -1,3 +1,8 @@
+/* Base styles and color utilities for the CV */
+:root {
+    --edge-green: #42C89A;
+    --edge-cyan: #00A4EF;
+}
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f0f4f8;
@@ -7,10 +12,10 @@ body {
     background-color: #ff0000;
     background-image: linear-gradient(45deg, #ff4b4b, #ff0000, #b20000);
 }
-.text-edge-green { color: #42C89A; }
-.text-edge-cyan { color: #00A4EF; }
-.border-edge-green { border-color: #42C89A; }
-.icon-cyan { color: #00A4EF; }
+.text-edge-green { color: var(--edge-green); }
+.border-edge-green { border-color: var(--edge-green); }
+.text-edge-cyan,
+.icon-cyan { color: var(--edge-cyan); }
 
 
 ul {
