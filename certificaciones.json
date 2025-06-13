@@ -11,7 +11,7 @@
     "category": "Habilidades Personales",
     "items": [
       "Curso de Oratoria, Habilidades Blandas (Platzi)",
-      "Entender Emociones I (Coursera), II (Platzi)",
+      "Entender Emociones I (Coursera), Entender Emociones II (Platzi)",
       "Gestión del Tiempo (Platzi)"
     ]
   },
@@ -19,7 +19,7 @@
     "category": "Ofimática y Datos",
     "items": [
       "Excel (Básico, Intermedio, Avanzado, Macros) (Platzi)",
-      "Excel 2010, Office 2010 (SENA)",
+      "Excel 2010, Word 2010 (SENA)",
       "PowerPoint y Word para empresas (Platzi)"
     ]
   },
@@ -36,8 +36,8 @@
     "category": "Admón. Pública y Operativa",
     "spanTwo": true,
     "items": [
-      "Admón. y recuperación de cartera (SENA)",
-      "Admón. y control de inventarios (SENA)",
+      "Administración y recuperación de cartera (SENA)",
+      "Administración y control de inventarios (SENA)",
       "Atención al cliente por medios tecnológicos (SENA)",
       "Administración de Recursos Humanos (SENA)",
       "Resolución de Problemas y Toma de Decisiones (Coursera)",
