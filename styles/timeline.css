@@ -1,0 +1,29 @@
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+    padding-left: 2.5rem;
+}
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 100%;
+    width: 2px;
+    background-color: #e2e8f0;
+}
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: #00A4EF;
+    border: 2px solid #fff;
+    z-index: 10;
+}
