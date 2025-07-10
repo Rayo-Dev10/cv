@@ -1,8 +1,7 @@
 {
   "name": "Rayo Palatianos",
   "title": "Consultor y Gestor Administrativo",
-  "description": "Consultor y gestor administrativo con experiencia comprobada en los sectores financiero, comercial y digital. He desarrollado competencias en inteligencia de negocios, atención al ciudadano, manejo documental y resolución de conflictos. A lo largo de mi trayectoria, he fortalecido mi criterio jurídico gracias a seis semestres cursados en Derecho colombiano, lo que me permite interpretar normativas y procesos públicos con mayor solidez. Me distingo por mi capacidad para ofrecer soluciones prácticas, adaptarme con facilidad a escenarios exigentes y construir relaciones interpersonales desde la empatía, el compromiso con el servicio y una comunicación clara. He liderado procesos de expansión institucional, atención directa a usuarios, gestión de trámites, formación de equipos y adopción de herramientas tecnológicas orientadas a la mejora continua. Mi formación académica, sumada a una vocación genuina por el servicio, me posiciona como un recurso valioso para entidades públicas con enfoque administrativo, social o financiero.",
-  "photoUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFs-EKWXsDmMg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1709139849249?e=2147483647&v=beta&t=N65UtqTk2eSflBRG_EFU9-wtfhW-5duQVjSaxW_ApoQ",
+  "description": "Soy una persona responsable, comprometida y con buenas habilidades comunicativas. He trabajado como telemercaderista y en atención al cliente, lo cual me ha permitido desarrollar disciplina, empatía y capacidad de adaptación. Actualmente me encuentro enfocado en mis estudios universitarios nocturnos, y mi principal interés es encontrar un trabajo estable que me permita sostener mi formación profesional a largo plazo. Estoy dispuesto a aprender, aportar con lo que sé y asumir tareas con seriedad y respeto, sin otra ambición que cumplir bien mi rol y crecer dentro de una organización que valore el compromiso diario.  "photoUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFs-EKWXsDmMg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1709139849249?e=2147483647&v=beta&t=N65UtqTk2eSflBRG_EFU9-wtfhW-5duQVjSaxW_ApoQ",
   "contact": {
     "email": "rayo.palatianos@gmail.com",
     "phone": "+57 311 246 8944",
@@ -10,15 +9,7 @@
     "location": "Pensilvania, Caldas"
   },
   "skills": {
-    "Tecnológicas": [
-      "Excel avanzado, macros, Power BI, MySQL",
-      "PowerPoint, Word, CRM (Salesforce)",
-      "Herramientas Google, Bases de datos"
-    ],
-    "Administrativas": [
-      "KPIs, gestión documental, recuperación de cartera",
-      "Control de inventarios, Gestión de clientes"
-    ],
+  
     "Blandas": [
       "Comunicación asertiva, empatía, liderazgo",
       "Servicio al cliente, resiliencia, solución de conflictos"
@@ -29,7 +20,6 @@
     "Inglés": "Básico Conversacional"
   },
   "interests": [
-    "Natación y conducción recreativa",
     "Audiolibros y diseño web",
     "Fútbol aficionado"
   ]
