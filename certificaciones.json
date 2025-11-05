@@ -2,19 +2,40 @@
   {
     "category": "Administración operativa y empresarial",
     "items": [
-      "Analisis del Sistema de Administracion del Riesgo y Lavado de Activos y Financiacion del Terrorismo (SENA, 2025)",
       "Administración y recuperación de cartera (SENA, 2025)",
-      "Administración y control de inventarios (SENA, 2025)",
-      "Atención al cliente por medios tecnológicos (SENA, 2025)"
+      "Atención al cliente por medios tecnológicos (SENA, 2025)",
+      "Resolución de Problemas y Toma de Decisiones (Coursera, 2025)"
     ]
   },
     {
     "category": "Ofimática y Datos",
     "items": [
+      "Excel 365 Avanzado con Macros (Platzi, 2024)",
+      "Excel 365 Avanzado (Platzi, 2024)",
       "Excel 365 Intermedio (Platzi, 2024)",
       "Excel 365 Básico (Platzi, 2024)",
+      "PowerPoint: Plantillas y Vistas de Presentación (Platzi, 2024)",
+      "Word: Diseño de Plantillas y Creación de Formularios (Platzi, 2024)",
       "Word 2010 (SENA, 2015)",
       "Excel 2010 (SENA, 2014)"
+    ]
+  },
+  {
+    "category": "Habilidades Personales",
+    "items": [
+      "Habilidades Blandas (Platzi, 2025)",
+      "Entender Emociones II (Coursera, 2025)",
+      "Curso de Oratoria (Platzi, 2024)",
+      "Entender Emociones I (Platzi, 2024)",
+      "Gestión del Tiempo (Platzi, 2024)"
+    ]
+  },
+  {
+    "category": "Gestión Documental",
+    "items": [
+      "Estrategias para Acceso y Uso de Información (SENA, 2025)",
+      "Gestión Documental para Empresas (Platzi, 2024)",
+      "Legislación documental en entorno laboral (SENA, 2015)"
     ]
   }
 ]
