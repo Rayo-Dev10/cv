@@ -3,67 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Infográfico - Rayo Palatianos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Hoja de vida de Rayo Palatianos, consultor y gestor administrativo.">
+    <title>Rayo Palatianos | Hoja de vida</title>
     <link rel="stylesheet" href="styles/main.css">
-    </head>
-<body class="text-gray-800">
-    <div class="max-w-6xl mx-auto my-8 shadow-2xl rounded-lg overflow-hidden bg-white print:shadow-none">
-        <div class="md:flex">
-            <!-- Left Column / Sidebar -->
-            <aside id="sidebar" class="md:w-2/5 p-8 edge-blue text-white"></aside>
-
-            <!-- Right Column / Main Content -->
-            <main class="md:w-3/5 p-8">
-                <!-- Profile Section -->
-                <section class="mb-6">
-                    <h3 class="text-2xl font-bold mb-4 text-edge-green flex items-center"><i class="fas fa-user-tie mr-3 text-edge-cyan"></i>PERFIL PROFESIONAL</h3>
-                    <p id="profileDescription" class="text-gray-600 leading-relaxed text-sm"></p>
-                </section>
-
-                <!-- Experience Section -->
-                <section class="mb-6">
-                    <h3 class="text-2xl font-bold mb-6 text-edge-green flex items-center"><i class="fas fa-briefcase mr-3 text-edge-cyan"></i>EXPERIENCIA LABORAL</h3>
-                    <div id="experienceList" class="relative">
-                        <!-- Los elementos de experiencia se cargan desde experiencia.json -->
-                    </div>
-                </section>
-
-                <!-- Education Section -->
-                <section class="mb-6">
-                    <h3 class="text-2xl font-bold mb-4 text-edge-green flex items-center"><i class="fas fa-graduation-cap mr-3 text-edge-cyan"></i>FORMACIÓN ACADÉMICA</h3>
-                    <div id="educationList" class="space-y-3 text-sm">
-                        <!-- La información académica se carga desde formacion.json -->
-                    </div>
-                </section>
-                
-                <!-- Certifications Section -->
-                <section>
-                    <h3 class="text-2xl font-bold mb-4 text-edge-green flex items-center"><i class="fas fa-award mr-3 text-edge-cyan"></i>CERTIFICACIONES</h3>
-                    <div id="certificationGrid" class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5 text-xs">
-                        <!-- Las certificaciones se cargan desde certificaciones.json -->
-                    </div>
-                </section>
-            </main>
-        </div>
-</div>
-
-    <!-- PDF Export Button -->
-    <button id="exportPdfBtn" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 print:hidden bg-adobe-red text-white px-4 py-2 rounded shadow-lg">EXPORTAR A PDF</button>
-    <!-- Overlay with export size options -->
-    <div id="pdfOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 print:hidden flex items-center justify-center">
-        <div class="bg-white p-6 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-3 gap-4">
-            <button data-size="letter" class="pdf-option border rounded p-4 hover:bg-edge-blue hover:text-white">Tamaño Carta</button>
-            <button data-size="custom" class="pdf-option border rounded p-4 hover:bg-edge-blue hover:text-white">Tamaño Real</button>
-        </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
+</head>
+<body>
+    <article id="resume" class="resume" aria-label="Hoja de vida de Rayo Palatianos">
+        <header id="resumeHeader" class="resume-header"></header>
+        <main>
+            <section aria-labelledby="profileHeading"><h2 id="profileHeading">Perfil profesional</h2><p id="profileDescription"></p></section>
+            <section aria-labelledby="skillsHeading"><h2 id="skillsHeading">Competencias clave</h2><div id="skillsList" class="skills-list"></div></section>
+            <section aria-labelledby="experienceHeading"><h2 id="experienceHeading">Experiencia profesional</h2><div id="experienceList"></div></section>
+            <section aria-labelledby="educationHeading"><h2 id="educationHeading">Formación académica</h2><div id="educationList"></div></section>
+            <section aria-labelledby="certificationsHeading"><h2 id="certificationsHeading">Certificaciones y cursos</h2><div id="certificationList"></div></section>
+            <section aria-labelledby="languagesHeading"><h2 id="languagesHeading">Idiomas</h2><div id="languagesList" class="inline-list"></div></section>
+        </main>
+    </article>
+    <button id="exportPdfBtn" class="export-button" type="button">Imprimir o guardar como PDF</button>
     <script type="module" src="scripts/index.js"></script>
-    </body>
+</body>
 </html>

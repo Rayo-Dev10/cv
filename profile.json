@@ -1,7 +1,7 @@
 {
   "name": "Rayo Palatianos",
   "title": "Consultor y Gestor Administrativo",
-  "description": "Consultor y gestor administrativo con experiencia comprobada en los sectores financiero, comercial y digital. He desarrollado competencias en inteligencia de negocios, atención al ciudadano, manejo documental y resolución de conflictos. A lo largo de mi trayectoria, he fortalecido mi criterio jurídico gracias a seis semestres cursados en Derecho colombiano, lo que me permite interpretar normativas y procesos públicos con mayor solidez. Me distingo por mi capacidad para ofrecer soluciones prácticas, adaptarme con facilidad a escenarios exigentes y construir relaciones interpersonales desde la empatía, el compromiso con el servicio y una comunicación clara. He liderado procesos de expansión institucional, atención directa a usuarios, gestión de trámites, formación de equipos y adopción de herramientas tecnológicas orientadas a la mejora continua. Mi formación académica, sumada a una vocación genuina por el servicio, me posiciona como un recurso valioso para entidades públicas con enfoque administrativo, social o financiero.",
+  "description": "Consultor y gestor administrativo con experiencia en los sectores financiero, comercial y digital. Trayectoria en coordinación operativa, servicio al cliente, gestión documental, análisis de datos, prevención de fraude y mejora de procesos. Formación interdisciplinaria en desarrollo de software, contaduría pública y Derecho colombiano. Capacidad para interpretar procedimientos, resolver conflictos y adoptar herramientas tecnológicas con enfoque en el servicio y el cumplimiento de objetivos.",
   "photoUrl": "https://drive.google.com/u/0/drive-viewer/AKGpihbb9VL2SIYJCqiS7m9vu8vbCtg2r9BEVrsX7YxCHem-WhUHnjbTipb44RUNggXxEBlJdzopB0sIM-vo8N4StiRxQ5QohQKbiss=s2560?auditContext=forDisplay",
   "contact": {
     "email": "rayo.palatianos@gmail.com",
@@ -11,17 +11,19 @@
   },
   "skills": {
     "Tecnológicas": [
-      "Excel avanzado, macros, Power BI, MySQL",
-      "PowerPoint, Word, CRM (Salesforce)",
-      "Herramientas Google, Bases de datos"
+      "Excel avanzado y macros",
+      "Power BI y MySQL",
+      "Microsoft Word, PowerPoint y Salesforce CRM",
+      "Google Workspace y bases de datos"
     ],
     "Administrativas": [
-      "KPIs, gestión documental, recuperación de cartera",
-      "Control de inventarios, Gestión de clientes"
+      "Indicadores de gestión (KPIs)",
+      "Gestión documental y recuperación de cartera",
+      "Control de inventarios y gestión de clientes"
     ],
     "Blandas": [
-      "Comunicación asertiva, empatía, liderazgo",
-      "Servicio al cliente, resiliencia, solución de conflictos"
+      "Comunicación asertiva, empatía y liderazgo",
+      "Servicio al cliente, resiliencia y resolución de conflictos"
     ]
   },
   "languages": {

@@ -1,21 +1,2 @@
-/* Adds a subtle shine animation to the export button */
-#exportPdfBtn {
-    position: relative;
-    overflow: hidden;
-}
-#exportPdfBtn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
-    pointer-events: none;
-    animation: shine 3s infinite;
-}
-@keyframes shine {
-    0% { left: -100%; }
-    60% { left: 100%; }
-    100% { left: 100%; }
-}
+.export-button { position: fixed; bottom: 1.25rem; left: 50%; transform: translateX(-50%); padding: 0.7rem 1.1rem; border: 0; border-radius: 0.25rem; color: #fff; background: #17212b; font: 600 10pt Arial, sans-serif; cursor: pointer; box-shadow: 0 4px 12px rgb(15 23 42 / 25%); }
+@media print { .export-button { display: none; } }
