@@ -3,9 +3,12 @@ import { el, parseCertItem } from './helpers.js';
 
 export async function loadData() {
   const [profile, experience, education, certifications] = await Promise.all([
-    'profile.json', 'experiencia.json', 'formacion.json', 'certificaciones.json'
+    'profile.json?v=20260822-1',
+    'experiencia.json?v=20260822-1',
+    'formacion.json?v=20260822-1',
+    'certificaciones.json?v=20260822-1'
   ].map(file => fetch(file).then(response => {
-    if (!response.ok) throw new Error(`No se pudo cargar ${file}`);
+    if (!response.ok) throw new Error(`No se pudo cargar ${file.split('?')[0]}`);
     return response.json();
   })));
 
